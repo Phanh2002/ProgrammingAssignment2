@@ -1,6 +1,6 @@
 ## Peer-graded Assignment: Programming Assignment 2: Lexical Scoping
 
-
+# Create function: makeCachematrix
 makeCachematrix <- function(x = matrix()) {
   inv <- NULL
   set <- function(y) {
@@ -15,6 +15,7 @@ makeCachematrix <- function(x = matrix()) {
        getInverse = getInverse)
 }
 
+# Create function: cacheSolve
 cacheSolve <- function(x, ...) {
   inv <- x$getInverse()
   if(!is.null(inv)) {
@@ -59,11 +60,13 @@ cacheSolve <- function(x, ...) {
      [,1] [,2]
 [1,]    6    8
 [2,]    2    4
+# Call "m1" matrix that I created above and matrix appear
 > myMatrix_object <- makeCachematrix(m1)
 > myMatrix_object$get()
       [,1]  [,2]
 [1,]  0.50 -1.00
 [2,] -0.25  0.75
+# Then call "cacheSlove" function to calculate inverse matrix automatically
 > cacheSolve(myMatrix_object)
      [,1] [,2]
 [1,]    6    8
